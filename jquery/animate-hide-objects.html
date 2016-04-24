@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+
+     $("h1").click(function(){
+        $("h1").animate({fontSize: "100px"});
+    });
+
+    $("<div>").click(function(){
+       $("h1").animate({fontSize: "100px"});
+    });
+
+    // Assign Properties to boxes
+          $("#me").click(function(){
+       		 $("#me").animate({height:'500px'});
+       		});
+
+          $("#fighter1").click(function(){
+       		 $("#fighter1").animate({width:'500px'});
+       		});
+
+          $("#fighter2").click(function(){
+       		 $("#fighter2").animate({margin:'25px'});
+       		});
+
+          $("#fighter3").click(function(){
+       		 $("#fighter3").animate({height: 'toggle'});
+       		});
+           
+
+             $('#enemy').click(function(){
+              //var _enemy=$('#enemy');
+       		 //$("h3").clone().appendTo(_enemy);
+       		 $('#enemy').clone().appendTo($('h3'))
+       		});
+
+       		 	
+       		
+});
+
+</script>
+
+<style>
+	ul {
+		display: inline;
+
+	}
+
+.fighters div {
+	/*padding:10px;*/
+	margin:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<h1>This is header</h1>
+	<div id="me" style="background:#98bf21;height:100px;width:100px;position:relative;"> Inter Galactic Traveller</div>
+<hr>
+<!-- 	<ul>
+		<li><div id="fighter1" style="background:#98bf21;height:100px;width:100px;position:relative;"> </div></li>		 
+			<li><div id="fighter2" style="background:#98bf21;height:100px;width:100px;position:relative; "> </div></li>
+			<li><div id="fighter3" style="background:#98bf21;height:100px;width:100px;position:relative;;"> </div></li>
+    </ul>
+ -->
+ 	<h3 id="hideSpot"> This is hide spot!</h3>
+		<div id="fighter1" style="background:#98bf21;height:100px;width:100px;position:relative;">F1 </div>	 
+			<div id="fighter2" style="background:#98bf21;height:100px;width:100px;position:relative; "> F2 </div>
+			<div id="fighter3" style="background:#98bf21;height:100px;width:100px;position:relative;;"> F3 </div>
+
+<hr>
+		
+		<div id="enemy" style="background:#98bf21;height:100px;width:100px;position:relative; float:left;">Enemy</div>
+			
+</body>
+</html>
