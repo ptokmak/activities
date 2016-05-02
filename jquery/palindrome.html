@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		// Write a function that will detect whether a given word is a palindrome
+	// The function should console.log("true") if a palindrome is detected
+	// The function should console.log("false") if the word is not a palindrome
+
+		var words = [
+		  'barry',
+		  'racecar',
+		  'tarrot',
+		  "lolol",
+		  'salimandar'
+		];
+		var _newWords = [];
+		var _reversedWord="";
+		var _word="";
+		
+	function palindromeDetector() {
+		for( i=0; i<words.length; i++)
+		{
+			_word = words[i];
+			_reversedWord="";
+			for(j=_word.length -1; j >= 0; j--)
+			{
+				_reversedWord=_reversedWord + _word[j];
+				// console.log(_reversedWord);
+			}
+			if(_word == _reversedWord)
+			{
+				// alert(_word + " is a palindrome.")
+				console.log(_word + " is a palindrome.")
+				_newWords.push(_reversedWord);
+
+			}
+			console.log(_reversedWord);
+		}
+		console.log("Showing the reversed words from new Array.")
+		for( i=0; i<_newWords.length; i++)
+		{
+			console.log(_newWords[i]);
+		}
+	}
+	// palindromeDetector();
+	window.onload = palindromeDetector;
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
